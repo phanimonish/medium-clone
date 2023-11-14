@@ -1,13 +1,142 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+	font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  border-bottom: solid 1px #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-btn{
+  display: none;
+}
+
+.write{
+  display: flex;
+}
+
+.search-div{
+  width: 15%;
+}
+
+.logo{
+  height: 50px;
+  width: auto;
+}
+
+.account{
+  height: 30px;
+  width: auto;
+}
+
+.search {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 30px;
+  min-height: 2rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.search input {
+  border: none;
+  width: 100%;
+  height: 25px;
+  background-color: #F9F9F9;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.right-nav-content{
+  align-items: center;
+}
+
+.dynamic{
+  border-right: solid 1px #F2F2F2;
+  height: 90%;
+}
+
+.static{
+  border-left: solid 1px #F2F2F2;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+
+.li-items{
+  padding-left: 7%;
+  font-size: 1em;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+.post{
+  border: none;
+  border-bottom: solid 1.5px #F2F2F2 !important;
+  width: 90%;
+  align-items: center;
+}
+
+.posts-div{
+  padding: 1%;
+  position: fixed;
+  height: 78%;
+  width: 60%;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-left: 5%;
+}
+
+hr{
+  width: 80%;
+  margin-left: 9%;
+}
+
+@media (max-width: 702px) {
+  .search {
+    display: none;
+  }
+
+  .write{
+    display: none;
+  }
+
+  .search-btn{
+    display: flex;
+  }
+
+  .li-items{
+    font-size: 14px;
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 900px) {
+  .static{
+    display: none;
+  }
+  .posts-div{
+    padding: 1%;
+    position: fixed;
+    height: 78%;
+    width: 90%;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: 7%;
+  }
+  .left-content{
+    width: 100%;
+  }
 }
