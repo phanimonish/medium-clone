@@ -9,6 +9,11 @@ html {
   justify-content: space-between;
 }
 
+.items{
+  color: #000;
+  text-decoration: inherit;
+}
+
 .search-btn{
   display: none;
 }
@@ -78,6 +83,8 @@ html {
   overflow-x: scroll;
 }
 
+
+
 ::-webkit-scrollbar{
   width: 0;
 }
@@ -85,7 +92,6 @@ html {
 .post{
   border: none;
   border-bottom: solid 1.5px #F2F2F2 !important;
-  width: 90%;
   align-items: center;
 }
 
@@ -93,7 +99,7 @@ html {
   padding: 1%;
   position: fixed;
   height: 78%;
-  width: 60%;
+  width: 55%;
   overflow: hidden;
   overflow-y: scroll;
   margin-left: 5%;
@@ -103,6 +109,8 @@ hr{
   width: 80%;
   margin-left: 9%;
 }
+
+
 
 @media (max-width: 702px) {
   .search {

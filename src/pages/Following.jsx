@@ -3,11 +3,11 @@ import Navbar from "../components/Navbar";
 import Post from "../components/Post";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Following() {
   return (
     <div>
-      <Navbar />
-      <div className="container-fluid">
+        <Navbar/>
+        <div className="container-fluid">
         <div className="row">
           <div className="left-content col-8">
             <div className="li-items mt-4 ms-4 d-flex">
@@ -24,32 +24,25 @@ function Home() {
                   </svg>
                 </p>
               </Link>
-              <Link to="/">
+              <Link style={{ textDecoration: "none" }} to="/">
                 <p className="items pb-0 mb-0 ps-4">For You</p>
               </Link>
-              <Link style={{ textDecoration: "none" }} to="/following">
+              <Link to="/following">
                 <p className="items pb-0 mb-0 ps-4">Following</p>
               </Link>
               <Link style={{ textDecoration: "none" }} to="/javascript">
-                <p className="items mb-0 ps-4">JavaScript</p>
-              </Link>{" "}
+                <p className="items pb-0 mb-0 ps-4">JavaScript</p>
+              </Link>
               <Link style={{ textDecoration: "none" }} to="/reactpage">
                 <p className="items pb-0 mb-0 ps-4">React</p>
-              </Link>{" "}
+              </Link>
               <Link style={{ textDecoration: "none" }} to="/webdevelopment">
                 <p className="items pb-0 mb-0 ps-4">Web Development</p>
-              </Link>{" "}
+              </Link>
             </div>
             <hr className="" />
             <div className="posts-div">
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
+                <h1 className="text-center" style={{margin: " 180px 0px"}}>Following-posts</h1>
             </div>
           </div>
           <div className="col-4">
@@ -65,4 +58,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Following;

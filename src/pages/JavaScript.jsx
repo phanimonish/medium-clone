@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Post from "../components/Post";
 import { Link } from "react-router-dom";
 
-function Home() {
+function JavaScript() {
   return (
     <div>
       <Navbar />
@@ -24,14 +24,14 @@ function Home() {
                   </svg>
                 </p>
               </Link>
-              <Link to="/">
+              <Link style={{ textDecoration: "none" }} to="/">
                 <p className="items pb-0 mb-0 ps-4">For You</p>
               </Link>
               <Link style={{ textDecoration: "none" }} to="/following">
                 <p className="items pb-0 mb-0 ps-4">Following</p>
               </Link>
-              <Link style={{ textDecoration: "none" }} to="/javascript">
-                <p className="items mb-0 ps-4">JavaScript</p>
+              <Link  to="/javascript">
+                <p className="items pb-0 mb-0 ps-4">JavaScript</p>
               </Link>{" "}
               <Link style={{ textDecoration: "none" }} to="/reactpage">
                 <p className="items pb-0 mb-0 ps-4">React</p>
@@ -42,14 +42,9 @@ function Home() {
             </div>
             <hr className="" />
             <div className="posts-div">
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
+              <h1 className="text-center" style={{ margin: " 180px 0px" }}>
+                JavaScript-posts
+              </h1>
             </div>
           </div>
           <div className="col-4">
@@ -65,4 +60,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default JavaScript;
