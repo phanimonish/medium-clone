@@ -17,7 +17,7 @@ function Following() {
                 to="/addpost"
                 style={{ textDecoration: "none", color: "#000" }}
               >
-                <p className=" pb-0 mb-0 ">
+                <p className="pb-0 mb-0 ">
                   <svg width="19" height="19" class="hk hl hm">
                     <path
                       d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z"
@@ -39,7 +39,7 @@ function Following() {
                 <p className="items pb-0 mb-0 ps-4">React</p>
               </Link>
               <Link style={{ textDecoration: "none" }} to="/webdevelopment">
-                <p className="items pb-0 mb-0 ps-4">Web Development</p>
+                <p className="web-items items pb-0 mb-0 ps-4">Web Development</p>
               </Link>
             </div>
             <hr className="" />

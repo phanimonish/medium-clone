@@ -39,7 +39,7 @@ function JavaScript() {
                 <p className="items pb-0 mb-0 ps-4">React</p>
               </Link>{" "}
               <Link style={{ textDecoration: "none" }} to="/webdevelopment">
-                <p className="items pb-0 mb-0 ps-4">Web Development</p>
+                <p className="web-items items pb-0 mb-0 ps-4">Web Development</p>
               </Link>{" "}
             </div>
             <hr className="" />
