@@ -51,7 +51,7 @@ function WebDevelopment() {
             <div class="col-4 static position-fixed p-4">
               <h5 className="ps-3 pb-3">Static-Data</h5>
               <Post />
-              <Post />
+              
             </div>
           </div>
         </div>
