@@ -1,9 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Post from "../components/Post";
 import { Link } from "react-router-dom";
+import { staticData, webdevelopmentPosts} from "../Data";
+import renderCard from "../components/renderCard";
 
 function WebDevelopment() {
+  <renderCard/>
   return (
     <div>
       <Navbar />
@@ -41,16 +43,14 @@ function WebDevelopment() {
               </Link>
             </div>
             <hr className="" />
-            <div className="posts-div">
-              <h1 className="text-center" style={{ margin: " 180px 0px" }}>
-                WebDevelopment-posts
-              </h1>
+            <div className="posts-div">            
+            {webdevelopmentPosts.map(renderCard)}
             </div>
           </div>
           <div className="col-4">
             <div class="col-4 static position-fixed p-4">
               <h5 className="ps-3 pb-3">Static-Data</h5>
-              <Post />
+              {staticData.map(renderCard)}
               
             </div>
           </div>

@@ -1,9 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Post from "../components/Post";
 import { Link } from "react-router-dom";
+import renderCard from "../components/renderCard";
+import { staticData,reactPosts } from "../Data";
+
 
 function ReactPage() {
+  <renderCard />;
   return (
     <div>
       <Navbar />
@@ -41,17 +44,14 @@ function ReactPage() {
               </Link>
             </div>
             <hr className="" />
-            <div className="posts-div">
-              <h1 className="text-center" style={{ margin: " 180px 0px" }}>
-                React-posts
-              </h1>
-            </div>
+            <div className="posts-div">{reactPosts.map(renderCard)}</div>
           </div>
           <div className="col-4">
-            <div class="col-4 static position-fixed p-4">
-              <h5 className="ps-3 pb-3">Static-Data</h5>
-              <Post />
-              <Post />
+            <div>
+              <div class="col-4 static position-fixed p-4">
+                <h5 className="ps-3 pb-3">Static-Data</h5>
+                {staticData.map(renderCard)}
+              </div>
             </div>
           </div>
         </div>
