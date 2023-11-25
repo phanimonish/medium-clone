@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import renderCard from "../components/renderCard";
+import RenderCard from "../components/RenderCard";
 import { Link } from "react-router-dom";
 import { posts, staticData } from "../Data";
 
 function Home() {
-  <renderCard />;
+
   return (
     <div>
       <Navbar />
@@ -17,7 +17,7 @@ function Home() {
                 to="/addpost"
                 style={{ textDecoration: "none", color: "#000" }}
               >
-                <p className="me-2 pb-0 mb-0 ">
+                <p className="pb-0 mb-0 ">
                   <svg width="19" height="19" class="hk hl hm">
                     <path
                       d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z"
@@ -39,20 +39,28 @@ function Home() {
                 <p className="items pb-0 mb-0 ps-4">React</p>
               </Link>{" "}
               <Link style={{ textDecoration: "none" }} to="/webdevelopment">
-                <p className="web-items items pb-0 mb-0 ps-4">Web Development</p>
+                <p className="web-items items pb-0 mb-0">Web Development</p>
               </Link>{" "}
             </div>
             <hr className="" />
-            <div className="posts-div">{posts.map(renderCard)}</div>
+            <div className="posts-div">
+            {posts.map((card) => {
+              return <RenderCard card={card} />;
+            })}
+            </div>
           </div>
           <div className="col-4">
             <div class="col-4 static position-fixed p-4">
               <h5 className="ps-3 pb-3">Static-Data</h5>
-              {staticData.map(renderCard)}
+              {staticData.map((card) => {
+                return <RenderCard card={card} />;
+              })}
+              
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

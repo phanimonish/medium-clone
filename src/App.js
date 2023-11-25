@@ -5,6 +5,7 @@ import Addpost from "./pages/Addpost";
 import WebDevelopment from "./pages/WebDevelopment";
 import JavaScript from "./pages/JavaScript";
 import ReactPage from "./pages/ReactPage";
+import OpenPost from "./pages/OpenPost";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/webdevelopment" element={<WebDevelopment/>}></Route>
           <Route path="/javascript" element={<JavaScript/>}></Route>
           <Route path="/reactpage" element={<ReactPage/>}></Route>
+          <Route path="/openpost/:id" element={<OpenPost/>}></Route>
         </Routes>
       </div>
       </BrowserRouter>

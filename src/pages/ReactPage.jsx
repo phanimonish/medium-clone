@@ -1,12 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import renderCard from "../components/renderCard";
-import { staticData,reactPosts } from "../Data";
-
+import RenderCard from "../components/RenderCard";
+import { staticData, reactPosts } from "../Data";
 
 function ReactPage() {
-  <renderCard />;
   return (
     <div>
       <Navbar />
@@ -40,17 +38,25 @@ function ReactPage() {
                 <p className="items pb-0 mb-0 ps-4">React</p>
               </Link>
               <Link style={{ textDecoration: "none" }} to="/webdevelopment">
-                <p className="web-items items pb-0 mb-0 ps-4">Web Development</p>
+                <p className="web-items items pb-0 mb-0 ">
+                  Web Development
+                </p>
               </Link>
             </div>
             <hr className="" />
-            <div className="posts-div">{reactPosts.map(renderCard)}</div>
+            <div className="posts-div">
+              {reactPosts.map((card) => {
+                return <RenderCard card={card} />;
+              })}
+            </div>
           </div>
           <div className="col-4">
             <div>
               <div class="col-4 static position-fixed p-4">
                 <h5 className="ps-3 pb-3">Static-Data</h5>
-                {staticData.map(renderCard)}
+                {staticData.map((card) => {
+                  return <RenderCard card={card} />;
+                })}
               </div>
             </div>
           </div>

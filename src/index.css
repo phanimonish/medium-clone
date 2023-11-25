@@ -85,8 +85,6 @@ html {
   position: relative;
 }
 
-
-
 ::-webkit-scrollbar{
   width: 0;
 }
@@ -112,11 +110,29 @@ hr{
   margin-left: 9%;
 }
 
+.cut-off{
+  --max-lines: 8;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
 
+.web-items{
+  padding-left: 1.5rem;
+}
 
 @media (max-width: 702px) {
   .search {
     display: none;
+  }
+
+  .cut-off{
+    --max-lines: 5;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
   }
 
   .write{
@@ -148,6 +164,7 @@ hr{
 
   .web-items{
     width: 10rem;
+    padding-left: 0%;
   }
 }
 
