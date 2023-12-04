@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import RenderCard from "../components/RenderCard";
-import { staticData, reactPosts } from "../Data";
+import { reactPosts } from "../Data";
+import StaticData from "../components/StaticData";
 
 function ReactPage() {
   return (
@@ -52,12 +53,7 @@ function ReactPage() {
           </div>
           <div className="col-4">
             <div>
-              <div class="col-4 static position-fixed p-4">
-                <h5 className="ps-3 pb-3">Static-Data</h5>
-                {staticData.map((card) => {
-                  return <RenderCard card={card} />;
-                })}
-              </div>
+                <StaticData/>
             </div>
           </div>
         </div>

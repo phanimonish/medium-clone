@@ -56,12 +56,5 @@ const jsPosts = [
     para: "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.",
   },
 ];
-const staticData = [
-    {
-        id : 5,
-        title: "Static-Data",
-        para: "Static data is a data set that remains the same after you record it. Static data is unlikely to change or may do so only rarely, and includes the names of continents, established mathematical principles and scientific terms. Sometimes, static data may refer to a data structure."
-    }
-]
 
-export { posts, webdevelopmentPosts, followingPosts, reactPosts, jsPosts, staticData };
+export { posts, webdevelopmentPosts, followingPosts, reactPosts, jsPosts};

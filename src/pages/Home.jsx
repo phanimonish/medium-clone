@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import RenderCard from "../components/RenderCard";
 import { Link } from "react-router-dom";
-import { posts, staticData } from "../Data";
+import { posts } from "../Data";
+import StaticData from "../components/StaticData";
 
 function Home() {
-
   return (
     <div>
       <Navbar />
@@ -44,23 +44,16 @@ function Home() {
             </div>
             <hr className="" />
             <div className="posts-div">
-            {posts.map((card) => {
-              return <RenderCard card={card} />;
-            })}
+              {posts.map((card) => {
+                return <RenderCard card={card} />;
+              })}
             </div>
           </div>
           <div className="col-4">
-            <div class="col-4 static position-fixed p-4">
-              <h5 className="ps-3 pb-3">Static-Data</h5>
-              {staticData.map((card) => {
-                return <RenderCard card={card} />;
-              })}
-              
-            </div>
+              <StaticData/>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

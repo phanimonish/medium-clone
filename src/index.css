@@ -110,6 +110,10 @@ hr{
   margin-left: 9%;
 }
 
+.write{
+  text-decoration: none;
+}
+
 .cut-off{
   --max-lines: 8;
   display: -webkit-box;
@@ -120,6 +124,29 @@ hr{
 
 .web-items{
   padding-left: 1.5rem;
+}
+
+.title{
+  justify-content: center;
+  text-align: center;
+}
+
+.write-btn{
+  background-color: white;
+  border: 0;
+}
+
+.write-title{
+  border: solid 0.01px black;
+  border-radius: 10px;
+}
+
+.title:focus{
+  border: 0;
+}
+
+.b{
+  border-radius: 0px 0px 10px 10px;
 }
 
 @media (max-width: 702px) {
@@ -138,6 +165,11 @@ hr{
   .write{
     display: none;
   }
+
+
+
+
+
 
   .search-btn{
     display: flex;

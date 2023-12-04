@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import { jsPosts, staticData } from "../Data";
+import { jsPosts } from "../Data";
 import RenderCard from "../components/RenderCard";
+import StaticData from "../components/StaticData";
 
 function JavaScript() {
   return (
@@ -51,12 +52,7 @@ function JavaScript() {
             </div>
           </div>
           <div className="col-4">
-            <div class="col-4 static position-fixed p-4">
-              <h5 className="ps-3 pb-3">Static-Data</h5>
-              {staticData.map((card) => {
-                return <RenderCard card={card} />;
-              })}
-            </div>
+              <StaticData/>
           </div>
         </div>
       </div>

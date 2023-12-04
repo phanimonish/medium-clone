@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import { followingPosts, staticData } from "../Data";
+import { followingPosts } from "../Data";
 import RenderCard from "../components/RenderCard";
+import StaticData from "../components/StaticData";
 
 function Following() {
   return (
@@ -51,12 +52,7 @@ function Following() {
             </div>
           </div>
           <div className="col-4">
-            <div class="col-4 static position-fixed p-4">
-              <h5 className="ps-3 pb-3">Static-Data</h5>
-              {staticData.map((card) => {
-                return <RenderCard card={card} />;
-              })}
-            </div>
+              <StaticData/>
           </div>
         </div>
       </div>
