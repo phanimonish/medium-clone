@@ -27,7 +27,7 @@ const RenderCard = ({ card, index }) => {
           </div>
         </div>
         <div class="col-4">
-          <img src={card.img} class="img-fluid p-3" />
+          <img src={card.img} alt="..." class="boo img-fluid p-3" />
         </div>
       </div>
     </div>

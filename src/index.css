@@ -115,7 +115,7 @@ hr{
 }
 
 .cut-off{
-  --max-lines: 8;
+  --max-lines: 5;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -145,8 +145,16 @@ hr{
   border: 0;
 }
 
+.post-title{
+  margin-left: 12.5%;
+}
+
 .b{
   border-radius: 0px 0px 10px 10px;
+}
+
+.boo{
+  margin-top: 10%;
 }
 
 @media (max-width: 702px) {
@@ -155,7 +163,7 @@ hr{
   }
 
   .cut-off{
-    --max-lines: 5;
+    --max-lines: 3;
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
