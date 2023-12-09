@@ -1,15 +1,12 @@
 import React from "react";
-import { useQuill } from "react-quilljs";
-import "quill/dist/quill.snow.css";
 import logo from "../components/logo.png";
 import account from "../components/account.png";
 import { Link } from "react-router-dom";
 
 function Addpost() {
-  const { quillRef } = useQuill();
   return (
     <div>
-      <nav class="navbar h-25 pt-0 pb-0 ps-2 pe-5">
+      <nav class="addPost-navbar h-25 mt-2 pt-0 pb-0 ps-2 pe-5">
         <div className="left-nav-content d-flex">
           <a class="navbar-brand ms-3" href="/">
             <img className="logo" src={logo} alt=""></img>
@@ -52,17 +49,22 @@ function Addpost() {
       <div className="container">
         <div className="title">
           <h4>
-            <input className="write-title w-75 mt-3 p-3" placeholder="Title..." />
+            <input className="write-title mt-4 p-3" placeholder="Title" />
           </h4>
         </div>
-        <div
-          style={{ fontSize: 20, border: "1px solid black"  }}
-          className="write-para b w-75 mx-auto mt-2"
-        >
-          <div
-            style={{ height: 450, fontSize: 20, border: "-1 px solid black"}}
-            className="b p-3"
-            ref={quillRef}
+        <div>
+          <button className="svgIcon-use">
+            <svg class="" width="25" height="25">
+              <path
+                d="M20 12h-7V5h-1v7H5v1h7v7h1v-7h7"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <textarea 
+            rows={15}
+            className="write-text p-3"
+            placeholder="Tell your story..."
           />
         </div>
       </div>

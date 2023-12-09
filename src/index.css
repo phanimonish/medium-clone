@@ -1,38 +1,61 @@
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
-.navbar{
-  border-bottom: solid 1px #F2F2F2;
+.navbar {
+  border-bottom: solid 1px #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: auto;
 }
 
-.items{
+.addPost-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.svgIcon-use {
+  position: relative;
+  top: -467px;
+  left: 8rem;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 10px;
+  padding-right: 29px;
+  padding-bottom: 2px;
+  justify-content: center;
+  height: 35px;
+}
+
+.items {
   color: #000;
   text-decoration: inherit;
 }
 
-.search-btn{
+.search-btn {
   display: none;
 }
 
-.write{
+.write {
   display: flex;
 }
 
-.search-div{
+.search-div {
   width: 15%;
 }
 
-.logo{
+.logo {
   height: 50px;
   width: auto;
 }
 
-.account{
+.account {
   height: 30px;
   width: auto;
 }
@@ -41,7 +64,7 @@ html {
   display: flex;
   text-align: right;
   align-items: center;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border-radius: 30px;
   min-height: 2rem;
   margin-bottom: 10px;
@@ -53,31 +76,30 @@ html {
   border: none;
   width: 100%;
   height: 25px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .search input:focus {
   outline: none;
 }
 
-.right-nav-content{
+.right-nav-content {
   align-items: center;
 }
 
-.dynamic{
-  border-right: solid 1px #F2F2F2;
+.dynamic {
+  border-right: solid 1px #f2f2f2;
   height: 90%;
 }
 
-.static{
-  border-left: solid 1px #F2F2F2;
+.static {
+  border-left: solid 1px #f2f2f2;
   height: 100vh;
   overflow: hidden;
   overflow-y: scroll;
 }
 
-
-.li-items{
+.li-items {
   padding-left: 7%;
   font-size: 1em;
   overflow: hidden;
@@ -85,17 +107,17 @@ html {
   position: relative;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0;
 }
 
-.post{
+.post {
   border: none;
-  border-bottom: solid 1.5px #F2F2F2 !important;
+  border-bottom: solid 1.5px #f2f2f2 !important;
   align-items: center;
 }
 
-.posts-div{
+.posts-div {
   padding: 1%;
   position: fixed;
   height: 78%;
@@ -105,16 +127,16 @@ html {
   margin-left: 5%;
 }
 
-hr{
+hr {
   width: 80%;
   margin-left: 9%;
 }
 
-.write{
+.write {
   text-decoration: none;
 }
 
-.cut-off{
+.cut-off {
   --max-lines: 5;
   display: -webkit-box;
   overflow: hidden;
@@ -122,38 +144,57 @@ hr{
   -webkit-line-clamp: var(--max-lines);
 }
 
-.web-items{
+.web-items {
   padding-left: 1.5rem;
 }
 
-.title{
+.title {
   justify-content: center;
   text-align: center;
 }
 
-.write-btn{
+.write-btn {
   background-color: white;
   border: 0;
 }
 
-.write-title{
-  border: solid 0.01px black;
-  border-radius: 10px;
-}
-
-.title:focus{
+.write-title {
   border: 0;
+  font-family: Georgia;
+  font-size: 40px;
+  width: 68.5%;
 }
 
-.post-title{
+::placeholder {
+  color: #b3b3b1;
+}
+.write-text {
+  border: 0;
+  font-family: Georgia;
+  font-size: 21px;
+  margin-left: 12.5%;
+  resize: none;
+  margin-top: -20px;
+  width: 69%;
+}
+
+.write-title:focus {
+  outline: none;
+}
+
+.write-text:focus {
+  outline: none;
+}
+
+.post-title {
   margin-left: 12.5%;
 }
 
-.b{
+.b {
   border-radius: 0px 0px 10px 10px;
 }
 
-.boo{
+.boo {
   margin-top: 10%;
 }
 
@@ -162,7 +203,7 @@ hr{
     display: none;
   }
 
-  .cut-off{
+  .cut-off {
     --max-lines: 3;
     display: -webkit-box;
     overflow: hidden;
@@ -170,49 +211,44 @@ hr{
     -webkit-line-clamp: var(--max-lines);
   }
 
-  .write{
+  .write {
     display: none;
   }
 
-
-
-
-
-
-  .search-btn{
+  .search-btn {
     display: flex;
   }
 
-  .post{
+  .post {
     width: 95%;
   }
 
-  .li-items{
+  .li-items {
     font-size: 14px;
     padding-left: 5%;
     overflow: hidden;
     overflow-x: scroll;
   }
 
-  .navbar{
+  .navbar {
     padding-right: 5% !important;
   }
 
-  .items{
+  .items {
     width: 7em;
   }
 
-  .web-items{
+  .web-items {
     width: 10rem;
     padding-left: 0%;
   }
 }
 
 @media (max-width: 900px) {
-  .static{
+  .static {
     display: none;
   }
-  .posts-div{
+  .posts-div {
     padding: 1%;
     position: fixed;
     height: 78%;
@@ -221,9 +257,15 @@ hr{
     overflow-y: scroll;
     margin-left: 7%;
   }
-  .left-content{
+  .left-content {
     width: 100%;
   }
-
-
+}
+@media (max-width: 1000px) {
+  .svgIcon-use {
+    display: none;
+  }
+  .write-text{
+    margin-left: 15.8%;
+  }
 }
