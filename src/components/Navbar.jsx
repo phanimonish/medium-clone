@@ -6,6 +6,114 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
+      <div
+        class="modal fade account-modal "
+        id="staticBackdrop"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-sm modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-body pb-0">
+              <div className="ps-2 pt-2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-label="Profile"
+                  className="me-2"
+                >
+                  <circle cx="12" cy="7" r="4.5" stroke="currentColor"></circle>
+                  <path
+                    d="M3.5 21.5v-4.34C3.5 15.4 7.3 14 12 14s8.5 1.41 8.5 3.16v4.34"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Profile
+              </div>
+              <div className="ps-2 mt-2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="me-2"
+                  fill="none"
+                  aria-label="Lists"
+                >
+                  <path
+                    d="M6.44 6.69h0a1.5 1.5 0 0 1 1.06-.44h9c.4 0 .78.16 1.06.44l.35-.35-.35.35c.28.28.44.66.44 1.06v14l-5.7-4.4-.3-.23-.3.23-5.7 4.4v-14c0-.4.16-.78.44-1.06z"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M12.5 2.75h-8a2 2 0 0 0-2 2v11.5"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Library
+              </div>
+              <div className="ps-2 mt-2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="me-2"
+                  fill="none"
+                  aria-label="Stories"
+                >
+                  <path
+                    d="M4.75 21.5h14.5c.14 0 .25-.11.25-.25V2.75a.25.25 0 0 0-.25-.25H4.75a.25.25 0 0 0-.25.25v18.5c0 .14.11.25.25.25z"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M8 8.5h8M8 15.5h5M8 12h8"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Stories
+              </div>
+              <div className="ps-2 mt-2">
+                <svg
+                  width="24"
+                  height="24"
+                  className="me-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-label="Stats"
+                >
+                  <path
+                    d="M2.75 19h4.5c.14 0 .25-.11.25-.25v-6.5a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v6.5c0 .14.11.25.25.25zM9.75 19h4.5c.14 0 .25-.11.25-.25V8.25a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v10.5c0 .14.11.25.25.25zM16.75 19h4.5c.14 0 .25-.11.25-.25V4.25a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v14.5c0 .14.11.25.25.25z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                Stats
+              </div>
+            </div>
+            <hr className="ms-0 w-100" />
+            <div class="modal-body pt-0 ps-4 pb-0">
+              <p>Settings</p>
+              <p>Refine recommendations</p>
+              <p>Manage pubblications</p>
+              <p>Help</p>
+            </div>
+            <hr className="ms-0 w-100" />
+            <div class="modal-body pt-0 ps-4 pb-0">
+              <p>Become a medium member</p>
+              <p>Apply for author verification</p>
+              <p>Gift a membership</p>
+            </div>
+            <hr className="ms-0 w-100" />
+            <div class="modal-body ps-4 pt-0 pb-0">
+              <p>Sign Out</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="navbar h-25 pt-0 pb-0 ps-2 pe-5">
         <div className="left-nav-content d-flex">
           <a class="navbar-brand ms-3" href="/">
@@ -80,7 +188,13 @@ function Navbar() {
             </svg>
           </div>
           <div class="">
-            <img className="account ms-4" src={account} alt=""></img>
+            <button
+              className="write-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              <img className="account ms-4" src={account} alt=""></img>
+            </button>
           </div>
         </div>
       </nav>

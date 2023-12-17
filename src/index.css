@@ -198,6 +198,11 @@ hr {
   margin-top: 10%;
 }
 
+.account-modal{
+  margin-left: 35%;
+  margin-top: 2%;
+}
+
 @media (max-width: 702px) {
   .search {
     display: none;

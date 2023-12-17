@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Addpost() {
   return (
     <div>
-      <nav class="addPost-navbar h-25 mt-2 pt-0 pb-0 ps-2 pe-5">
+      <nav class="addPost-navbar navbar h-25 mt-2 pt-0 pb-0 ps-2 pe-5">
         <div className="left-nav-content d-flex">
           <a class="navbar-brand ms-3" href="/">
             <img className="logo" src={logo} alt=""></img>
